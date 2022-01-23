@@ -1,0 +1,7 @@
+il reste faire des ameliorations:
+-créer un classe mere type Entity regroupant les nombreuses caracteristiques 
+    similaires de nos classe,
+-sur le temps de recharge du navire,
+-et sur des tires aléatoires mono ennemi,
+-faire un clear du canvas lors d'une win ou lose au lieu de fermer la fenêtre 
+-Faire des ameliorations pour le plaisir et pour faire vivre nos idées
