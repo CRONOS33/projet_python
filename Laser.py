@@ -1,6 +1,7 @@
 ###Création classe/objet lazers pour un space invader par CRONOS et Aeraphal
 #Date de création:07/01/2022 .Dernière modification:23/01/2022
-#To do:#une fonction tir avec un temps de recharge random
+#To do:
+# #une fonction tir avec un temps de recharge random
 
 ###Bibliotèques
 import tkinter as tk
