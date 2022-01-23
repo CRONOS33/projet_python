@@ -1,7 +1,9 @@
-###Création classe/objet lazers pour un space invader par CRONOS et Aeraphal
+###Création classe Pile File car demandé par CRONOS et Aeraphal
 #Date de création:14/01/2022 .Dernière modification:23/01/2022
 
+#classe pile type FIFO
 class Pile:
+
     def __init__(self):
         self.valeur =[]
     
@@ -18,6 +20,7 @@ class Pile:
             print("la fonction est vide")
 
 
+#classe File type FIlSO
 class File:
     def __init__(self):
         self.valeur =[]
