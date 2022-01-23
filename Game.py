@@ -1,5 +1,6 @@
 ###Création space invader par CRONOS et Aeraphal
-#Date de création:17/12/2021 .Dernière modification:17/12/2021
+#Date de création:17/12/2021 .Dernière modification:23/12/2021
+#Cet élement lance le jeu
 
 
 ###Bibliotèques

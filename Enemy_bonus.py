@@ -1,68 +1,61 @@
-###Création classe/objet ennemi bonys pour un space invader par CRONOS et Aeraphal
+###Création classe/objet ennemi bonus pour un space invader par CRONOS et Aeraphal
 #Date de création:07/01/2022 .Dernière modification:23/01/2022
-#To do:tout
+#To do:Il y a des redondances de fonctions et propriétées avec d'autres classes il y 
+#donc possiblité de créer un classe mère les regroupants.
+
+###Bibliotèques
 import tkinter as tk
 
+#La class ennemi bonus
 class Enemy_bonus:
-    #Classe enemy
+    
     def __init__(self,canvas,x,y,window=None):
-        self.points=500
-        self.life=3
-        self.op=0
-        self.hitbox=[40,40]
-        self.x = x
-        self.y = y
-        self.canvas=canvas
-        self.speed=8
-        self.direction=1
-        self.window=window
+        self.points=500       #score offert par l'ennemi bonus lors de l'élimination
+        self.life=3           #Points de vie de l'ennemi bonus
+        self.op=0             #taille de l'ennemie [x,y]
+        self.hitbox=[40,40]   #taille de l'ennemie [x,y]
+        self.x = x            #position x du canvas
+        self.y = y            #position y du canvas
+        self.canvas=canvas    #canvas lier à l'ennemi bonus
+        self.speed=8          #permet le deplacement plus ou moins rapide du monstre
+        self.direction=1      #permet le deplacement a droite ou a gauche 
+        self.window=window    #fenêtre lier à l'ennemi bonus
         self.image= tk.PhotoImage(file="rouge.gif")
         self.canvas_image = self.canvas.create_image(self.x,self.y,anchor = "nw",image=self.image)
 
-    @property
+    @property 
     def min_x(self):
+        #permet de connaitre la position minimum en x
         return self.x
     
     @property
     def min_y(self):
+        #permet de connaitre la position minimum en y
         return self.y
     
     @property
     def max_x(self):
+        #permet de connaitre la position maximum en x
         return self.x + self.hitbox[0]
     
     @property
     def max_y(self):
+        #permet de connaitre la position maximum en y
         return self.y + self.hitbox[1]
     
     @property
     def coordinates(self):
+        #permet de connaitre les coordonées des 4 points de l'ennemi bonus
         return [[self.x,self.y],[self.x+self.hitbox[0],self.y],[self.x,self.y+self.hitbox[1]],[self.x+self.hitbox[0],self.y+self.hitbox[1]]]
-
-    def move_up(self):
-        dx=0
-        dy=-self.speed
-        self.canvas.move(self.canvas_image,dx,dy)
-        self.x=self.x +dx
-        self.y=self.y +dy
-
-    def move_down(self):
-        dx=0
-        dy=self.speed*9.9
-        self.canvas.move(self.canvas_image,dx,dy)
-        self.x=self.x +dx
-        self.y=self.y +dy
     
     def move_left(self):
+        #permet de deplacer l'enemi bonus vers la gauche
         dx=-self.speed
-        dy=0
-        self.canvas.move(self.canvas_image,dx,dy)
+        self.canvas.move(self.canvas_image,dx,0)
         self.x=self.x +dx
-        self.y=self.y +dy
     
     def move_right(self):
+        #permet de deplacer l'enemi bonus vers la gauche
         dx=self.speed
-        dy=0
-        self.canvas.move(self.canvas_image,dx,dy)
+        self.canvas.move(self.canvas_image,dx,0)
         self.x=self.x +dx
-        self.y=self.y +dy
