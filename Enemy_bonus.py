@@ -12,14 +12,13 @@ class Enemy_bonus:
     def __init__(self,canvas,x,y,window=None):
         self.points=500       #score offert par l'ennemi bonus lors de l'élimination
         self.life=3           #Points de vie de l'ennemi bonus
-        self.op=0             #taille de l'ennemie [x,y]
-        self.hitbox=[40,40]   #taille de l'ennemie [x,y]
+        self.hitbox=[40,40]   
         self.x = x            #position x du canvas
         self.y = y            #position y du canvas
-        self.canvas=canvas    #canvas lier à l'ennemi bonus
-        self.speed=8          #permet le deplacement plus ou moins rapide du monstre
+        self.canvas=canvas    #canvas lié à l'ennemi bonus
+        self.speed=8          #permet le deplacement plus ou moins rapide de l'ennemi bonus
         self.direction=1      #permet le deplacement a droite ou a gauche 
-        self.window=window    #fenêtre lier à l'ennemi bonus
+        self.window=window    #fenêtre lié à l'ennemi bonus
         self.image= tk.PhotoImage(file="rouge.gif")
         self.canvas_image = self.canvas.create_image(self.x,self.y,anchor = "nw",image=self.image)
 
