@@ -17,7 +17,7 @@ class Laser:
         self.canvas=canvas  #canvas lié à l'ennemi
         self.speed=3        #permet le deplacement plus ou moins rapide du laser
         self.window=window  #fenêtre lié au laser
-        self.image= tk.PhotoImage(file="Laser.gif")
+        self.image= tk.PhotoImage(file="Image\Laser.gif")
         self.canvas_image = self.canvas.create_image(self.x,self.y,anchor = "nw",image=self.image)
 
     @property 

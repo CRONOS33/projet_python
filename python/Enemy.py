@@ -23,7 +23,7 @@ class Enemy:
         self.speed=3        #permet le deplacement plus ou moins rapide de l'ennemi
         self.direction=1    #permet le deplacement a droite ou a gauche 
         self.window=window  #fenêtre lié à l'ennemi
-        self.image= tk.PhotoImage(file="enemy.gif")
+        self.image= tk.PhotoImage(file="Image\enemy.gif")
         self.canvas_image = self.canvas.create_image(self.x,self.y,anchor = "nw",image=self.image)
 
     @property 

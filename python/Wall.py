@@ -17,7 +17,7 @@ class Wall:
         self.y = y          #position en y
         self.canvas=canvas  #canvas lié au mur
         self.window=window  #fenêtre lié au mur
-        self.image= tk.PhotoImage(file="Wall.gif")
+        self.image= tk.PhotoImage(file="Image\Wall.gif")
         self.canvas_image = self.canvas.create_image(self.x,self.y,anchor = "nw",image=self.image)
 
     @property 

@@ -5,7 +5,7 @@
 ###Bibliotèques
 import tkinter as tk
 
-import Vessel as V
+import python.Vessel as V
 import Monde as M
 import Enemy_bonus as Eb
 import Pile_File as PF
@@ -26,7 +26,7 @@ def create_window():
     main_window.geometry('1200x600+100+100')
 
     #Images
-    background = tk.PhotoImage(file="background.gif")
+    background = tk.PhotoImage(file="Image/background.gif")
 
     #Canvas
     main_canvas= tk.Canvas(main_window,width=1000,height=550,bg="black")

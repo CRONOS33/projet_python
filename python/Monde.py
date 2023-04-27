@@ -60,15 +60,16 @@ class Monde:
             win=tk.Label(self.window,textvariable=self.txt_win)
             win.place(x=500,y=250)
             self.txt_win.set("you win")
-            self.window.after(2000,self.window.destroy)
+            self.window.after(20000,self.window.destroy)
 
         elif self.enemy==[]:
             #affiche que vous avez lose si tout les enemis sont mort et vous aussi
             #(Et ferme la fenêtre apres 2s)
-            self.txt_lose.set("you lose")
             lose=tk.Label(self.window,textvariable=self.txt_lose)
-            self.window.after(2000,self.window.destroy)
+            self.txt_lose.set("you lose")
             lose.place(x=450,y=300)
+            self.window.after(20000,self.window.destroy)
+           
 
         else:
             self.window.after(17,self.collision_laser_enemy)
@@ -171,7 +172,7 @@ class Monde:
                         self.laser_vessel.remove(laser)
 
                         enemy.canvas.delete(enemy.canvas_image)
-                        enemy.image=tk.PhotoImage(file="vert.gif")
+                        enemy.image=tk.PhotoImage(file="Image/vert.gif")
                         enemy.canvas_image = enemy.canvas.create_image(enemy.x,enemy.y,anchor = "nw",image=enemy.image)
                         enemy.life=enemy.life -1 
                         enemy.points=250

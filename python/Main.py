@@ -8,4 +8,5 @@
 import Interface as int
 
 ##game
-int.create_window()
+if __name__ == '__main__':
+    int.create_window()

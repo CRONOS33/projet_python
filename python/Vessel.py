@@ -20,7 +20,7 @@ class Vessel:
         self.cheat_move=0       #permet de cheat et ce deplacer vers le haut et le bas
         self.canvas=canvas      #canvas lié au navire
         self.window=window      #fenêtre lié au navire
-        self.image= tk.PhotoImage(file="vessel.gif")
+        self.image= tk.PhotoImage(file="Image/vessel.gif")
         self.canvas_image = self.canvas.create_image(self.x,self.y,anchor = "nw",image=self.image)
 
     @property 
