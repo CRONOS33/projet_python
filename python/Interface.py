@@ -5,7 +5,7 @@
 ###Bibliotèques
 import tkinter as tk
 
-import python.Vessel as V
+import Vessel as V
 import Monde as M
 import Enemy_bonus as Eb
 import Pile_File as PF
